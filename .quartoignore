@@ -1,0 +1,7 @@
+README.md
+.gitignore
+.quartoignore
+*.html
+*_files/
+*.pdf
+LICENSE

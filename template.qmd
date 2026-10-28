@@ -1,0 +1,85 @@
+---
+title: "Course Name"
+subtitle: "[01]: Lecture Topic"
+author:
+    - name: Your Name
+      email: "you@aau.dk"
+      email-obfuscation: references
+      affiliations:
+        - name: Aalborg University
+          department: Department of ...
+          city: Aalborg
+          postal-code: 9220
+          country: Denmark
+format:
+    aau-revealjs:
+      footer: Course Name
+---
+
+## Course Name
+
+> A quote to open the lecture.
+>
+> <footer>
+> Someone Famous<br>
+> (who they are)
+> </footer>
+
+# First section
+
+## Bullets and fragments
+
+- Section titles (`# ...`) appear in the outline.
+
+::: {.incremental}
+- Incremental bullets
+- appear one by one.
+:::
+
+::: {.fragment}
+- A fragment appears on the next click, with [highlighted]{.aau-orange} text.
+:::
+
+::: {.notes}
+Speaker notes: press `S` during the presentation.
+:::
+
+## Definitions and theorems
+
+> ### Definition
+> A **definition** written as a block quote with a level-3 heading.
+
+::: {.fragment}
+> ### Theorem (Name)
+> The same style works for theorems, with math: $\hat{\beta}=(X'X)^{-1}X'Y$.
+:::
+
+## Code and columns
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{.python}
+def heat_loss(area, u_value, t_in, t_out):
+    return area * u_value * (t_in - t_out)
+```
+:::
+
+::: {.column width="50%"}
+| Colour class | Example |
+|--------------|---------|
+| `.aau-blue` | [AAU Blå]{.aau-blue} |
+| `.aau-sapphire` | [Sapphire]{.aau-sapphire} |
+| `.aau-petroleum` | [Petroleum]{.aau-petroleum} |
+| `.aau-orange` | [Orange]{.aau-orange} |
+| `.aau-watermelon` | [Watermelon]{.aau-watermelon} |
+:::
+
+::::
+
+# Summing Up
+
+## Summing Up
+
+- Point one.
+- Point two.

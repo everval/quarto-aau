@@ -1,0 +1,44 @@
+---
+title: "Course Name"
+subtitle: "[01]: Exercises on Lecture Topic"
+author:
+    - name: Your Name
+      email: "you@aau.dk"
+      email-obfuscation: references
+      affiliations:
+        - name: Aalborg University
+          department: Department of ...
+          city: Aalborg
+          postal-code: 9220
+          country: Denmark
+format: aau-typst
+---
+
+## Exercise Set
+
+1. **Ex. 2.9 in Book**: Prove algebraically that $P_XM_X = 0$.
+
+<!--
+Solution hidden in a comment: it does not appear in the PDF.
+-->
+
+2. **A simulation exercise.** Follow the steps below:
+
+    i. Generate a regressor $x$ from a normal distribution.
+    ii. Estimate the model
+    $$y = \beta_1 x + u.$$
+    iii. Plot the histogram of $\hat{\beta}_1$.
+
+    ```python
+    import numpy as np
+    x = np.random.normal(size=100)
+    ```
+
+3. **Data.** The variables are:
+
+| Variable | Description |
+|----------|-------------|
+| `y` | Dependent variable |
+| `x` | Regressor |
+
+More details at [quarto.org](https://quarto.org).

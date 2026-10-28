@@ -1,0 +1,40 @@
+title: AAU
+author: J. Eduardo Vera-Valdés
+version: 1.1.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    revealjs:
+      theme: [default, aau.scss]
+      logo: logo.png
+      notes: true
+      show-notes: false
+      embed-resources: true
+      slide-number: true
+      show-slide-number: print
+      scrollable: true
+      preview-links: auto
+      code-overflow: wrap
+      transition: convex
+      self-contained-math: true
+      html-math-method: mathjax
+      toc: true
+      toc-depth: 1
+      toc-expand: 2
+      toc-title: "Outline"
+    typst:
+      papersize: a4
+      margin:
+        x: 2.2cm
+        top: 3cm
+        bottom: 2cm
+      mainfont: Barlow
+      fontsize: 11pt
+      font-paths: fonts
+      template-partials:
+        - typst-template.typ
+      logo:
+        path: logo.png
+        location: right-top
+        width: 2.6cm
+        padding: 0.8cm

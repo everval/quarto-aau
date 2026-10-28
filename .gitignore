@@ -1,0 +1,7 @@
+*.html
+*_files/
+.quarto/
+.DS_Store
+*.pdf
+*.typ
+!_extensions/**/*.typ

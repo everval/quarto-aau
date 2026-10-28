@@ -1,0 +1,124 @@
+/*-- scss:defaults --*/
+
+// Barlow is AAU's primary typeface; Arial is the official fallback.
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+
+// AAU colours (AAU Blå from the official RGB logo; secondary colours from aau.dk)
+$aau-blue: #211A52 !default;
+$aau-sapphire: #007FA3 !default;
+$aau-azure: #008BB2 !default;
+$aau-petroleum: #0E8563 !default;
+$aau-pine: #0E8583 !default;
+$aau-orange: #BB5B17 !default;
+$aau-watermelon: #CC445B !default;
+$aau-coral: #E74B65 !default;
+$aau-hazelnut: #A16547 !default;
+$aau-moss: #97701F !default;
+$aau-gray: #667985 !default;
+$aau-light-gray: #F1F1F3 !default;
+$aau-mint: #C4F4F1 !default;
+$aau-sky: #7BA5E4 !default;
+
+// Background gradient; set $aau-gradient: false in your own .scss for a plain background
+$aau-gradient: true !default;
+$aau-gradient-from: $aau-mint !default;
+$aau-gradient-to: $aau-sky !default;
+
+// Typography
+$font-family-sans-serif: "Barlow", Arial, sans-serif !default;
+$presentation-heading-font: "Barlow", Arial, sans-serif !default;
+$presentation-font-size-root: 32px !default;
+$presentation-heading-font-weight: 600 !default;
+$presentation-heading-color: $aau-blue !default;
+$presentation-h1-font-size: 2em !default;
+$presentation-h2-font-size: 1.4em !default;
+$presentation-h3-font-size: 1.1em !default;
+
+// Colours
+$body-bg: #FFFFFF !default;
+$body-color: #1A1A1A !default;
+$link-color: $aau-sapphire !default;
+$code-block-bg: rgba(255, 255, 255, 0.85) !default;
+$code-block-border-color: rgba($aau-blue, 0.25) !default;
+$code-color: $aau-blue !default;
+
+/*-- scss:rules --*/
+
+@if $aau-gradient {
+  .reveal {
+    background: linear-gradient(135deg, $aau-gradient-from, $aau-gradient-to);
+    background-attachment: fixed;
+  }
+  .reveal .slides {
+    background: transparent;
+  }
+}
+
+.reveal .slides section .title {
+  color: $aau-blue;
+  font-weight: 700;
+}
+
+.reveal .slides section .subtitle {
+  color: $aau-sapphire;
+}
+
+// "> ### Definition" / "> ### Theorem" blocks
+.reveal blockquote {
+  width: auto;
+  box-sizing: border-box;
+  margin: 0.5em 0;
+  color: $body-color;
+  font-style: normal;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.6);
+  border-left: 6px solid $aau-blue;
+  border-radius: 4px;
+  box-shadow: none;
+  padding: 0.5em 1em;
+}
+
+.reveal blockquote h3 {
+  margin-top: 0;
+  color: $aau-blue;
+}
+
+.reveal blockquote footer {
+  font-size: 0.8em;
+  color: $aau-gray;
+}
+
+.reveal .slide-logo {
+  max-height: 3.5rem !important;
+}
+
+.reveal table thead th {
+  color: $aau-blue;
+  border-bottom: 2px solid $aau-blue;
+}
+
+.reveal .footer,
+.reveal .slide-number {
+  color: $aau-blue;
+}
+
+// Text colour helpers: [important]{.aau-orange}
+$aau-palette: (
+  "blue": $aau-blue,
+  "sapphire": $aau-sapphire,
+  "azure": $aau-azure,
+  "petroleum": $aau-petroleum,
+  "pine": $aau-pine,
+  "orange": $aau-orange,
+  "watermelon": $aau-watermelon,
+  "coral": $aau-coral,
+  "hazelnut": $aau-hazelnut,
+  "moss": $aau-moss,
+  "gray": $aau-gray
+);
+
+@each $name, $colour in $aau-palette {
+  .aau-#{$name} {
+    color: $colour !important;
+  }
+}
